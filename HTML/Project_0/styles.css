@@ -1,0 +1,17 @@
+form
+{
+	/* 1. Turn on the Flexbox layout engine */
+	display: flex;
+	/* 2. Stack the search bar and button vertically (Top-to-Bottom) */
+    /* Without this, they would sit side-by-side (Left-to-Right) */
+	flex-direction:column;
+	/* 3. Center items Horizontally (Left/Right) */
+    /* This works on the "Cross Axis" (perpendicular to the column) */
+	justify-content:center;
+	/* 4. Make the form as tall as the user's screen */
+    /* 100vh = 100% of Viewport Height. Necessary for vertical centering. */
+	height: 100vh;
+	/* 5. Center items Vertically (Up/Down) */
+    /* This works on the "Main Axis" (the direction of the column) */
+	align-items: center;
+}
