@@ -29,5 +29,47 @@
 	gap: 20px;
 
 	font-family: Arial, sans-serif;
+}
 
+input[type="text"]{
+	/* 1. This adds the curve */
+	border-radius: 24px;
+
+	/* 2. Google's search bar also needs a border to look defined */
+    border: 1px solid #dfe1e5;
+
+	/* 3. Add some padding so the text isn't squished against the curve */
+    padding: 5px 20px;
+
+	/* Optional: Remove the default blue outline when you click it */
+    outline: none;
+}
+
+
+label {
+    display: inline-block;
+    width: 300px; /* Adjust this number until they fit */
+}
+
+#advanced-search-form {
+	align-items: self-start;
+	justify-content: flex-start;
+}
+
+#advanced-search-form input[type="text"] {
+    /* 1. Remove the pill shape (make it rectangular) */
+    border-radius: 2px; 
+    
+    /* 2. Adjust border or padding if needed for the 'classic' look */
+    border: 1px solid #ccc;
+    height: 25px; /* Optional: standard height */
+}
+
+#blue-button {
+    background-color: #4d90fe;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
 }
