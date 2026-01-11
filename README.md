@@ -1,7 +1,5 @@
 # CS50's Web Programming with Python and JavaScript 🚀💻
 
-![Web Development Banner](images/web_dev_banner.png)
-
 ## Overview
 This repository contains the course materials for CS50's Web Programming with Python and JavaScript, a comprehensive introduction to web development. The course covers a variety of topics including HTML, CSS, JavaScript, Python, Django, databases, and more.
 ## Course Content
