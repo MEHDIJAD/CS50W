@@ -65,7 +65,7 @@ Press `CTRL + C` in the terminal where the server is running.
 deactivate
 ```
 
-### Creating a Django App
+## Creating a Django App
 A Django project can contain multiple apps. To create a new app, use the following command:
 ```bash
 python manage.py startapp myapp
@@ -97,3 +97,31 @@ INSTALLED_APPS = [
 	'myapp',
 ]
 ```
+This tells Django to include the app in the project.
+
+### Creating a View
+In `views.py`, you can create a simple view:
+```python# myapp/views.py
+from django.http import HttpResponse
+def home(request):
+	return HttpResponse("Hello, Django!")
+```
+### Configuring URLs
+Next, you need to configure the URL for the view. In `myapp`, create a new file called `urls.py`:
+```python# myapp/urls.py
+from django.urls import path
+from .views import home
+urlpatterns = [
+	path('', home, name='home'),
+]
+```
+Then, include the app's URLs in the project's `urls.py`:
+```python# myproject/urls.py
+from django.contrib import admin
+from django.urls import path, include
+urlpatterns = [
+	path('admin/', admin.site.urls),
+	path('', include('myapp.urls')),
+]
+```
+
